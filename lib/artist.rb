@@ -35,6 +35,10 @@ class Artist
       Artist.new(name)
     end
   end
+  
+  def print_songs
+    @songs
+  end
     
   
 
