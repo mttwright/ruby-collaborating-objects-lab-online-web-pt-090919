@@ -18,7 +18,7 @@ class Song
   
   def artist=(artist)
     @artist = artist
-    Artist.all
+  end
   
   def self.new_by_filename(filename)
     x = filename.split(" - ")
