@@ -4,7 +4,8 @@ require "pry"
 class Song
   
   @@all = []
-  attr_accessor :name, :artist
+  attr_accessor :name
+  attr_reader :artist
   
   def initialize(name)
     @name = name
@@ -14,6 +15,10 @@ class Song
   def self.all
     @@all
   end
+  
+  def artist=(artist)
+    @artist = artist
+    Artist.all
   
   def self.new_by_filename(filename)
     x = filename.split(" - ")
