@@ -22,7 +22,12 @@ class Song
   end
   
   def artist_name=(name)
-    self.artist.name = name
+    if self.artist
+      self.artist.name = name
+    else
+      Artist.new(name)
+      self.artist.name = name
+    end
   end
   
   def self.new_by_filename(filename)
