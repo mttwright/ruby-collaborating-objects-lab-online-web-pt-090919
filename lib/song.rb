@@ -32,6 +32,7 @@ class Song
     z = x[0]
     
     new = self.new(y)
+    new.artist_name=(z)
     
   end
   
