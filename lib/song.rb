@@ -22,7 +22,7 @@ class Song
   end
   
   def artist_name=(name)
-    Artist.find
+    Artist.find_or_create
   end
   
   def self.new_by_filename(filename)
