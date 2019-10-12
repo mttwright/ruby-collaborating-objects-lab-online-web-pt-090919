@@ -24,21 +24,6 @@ class Song
     
   end
   
-  def artist_name=(name)
-    found = false
-    Artist.all.each do |artist|
-      if artist.name == name
-        self.artist=(artist)
-        found = true
-      end
-    end
-    
-    if found == false
-      x = Artist.new(name)
-      x.add_song(self)
-    end
-    
-  end
       
       
         
